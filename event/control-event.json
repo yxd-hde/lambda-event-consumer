@@ -1,0 +1,8 @@
+{
+  "consumerArn": "arn:aws:lambda:ap-northeast-1:164201395711:function:nobita-mailstat-consumer-test:$LATEST",
+  "executionCount": 1,
+  "deadline": "3000-01-01T00:00:00Z",
+  "messageCount": 100,
+  "queueUrl": "https://sqs.ap-northeast-1.amazonaws.com/164201395711/nobita-mailstat-test",
+  "table": "nobita-mailstat-daily-test"
+}
