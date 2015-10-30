@@ -3,7 +3,7 @@
 default: clean dist zip;
 
 deps:
-	pip install tornado-botocore -t lib/ --upgrade
+	pip install tornado-botocore arrow -t lib/ --upgrade
 
 dist:
 	test -d dist || mkdir dist
