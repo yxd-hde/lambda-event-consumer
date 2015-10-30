@@ -1,0 +1,10 @@
+{
+  "id": "8c971f34-5706-41d0-862c-16dbe24faff0",
+  "detail-type": "Scheduled Event",
+  "source": "aws.events",
+  "account": "164201395711",
+  "time": "2015-10-29T18:00:00Z",
+  "region": "us-east-1",
+  "resources": [ "arn:aws:events:us-east-1:164201395711:rule/every-day-at-3-am-tokyo" ],
+  "detail": {}
+}
