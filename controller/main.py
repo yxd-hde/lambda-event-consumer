@@ -103,6 +103,8 @@ class QueueScheduler(object):
         for i in range(left):
             ret[i] += 1
 
+        logger.info("Execution plan of queue {}: {}".format(
+            self.queue_url, ret))
         return ret
 
     def _number_of_messages(self):
@@ -116,9 +118,12 @@ class QueueScheduler(object):
 
     @gen.coroutine
     def schedule(self):
+        logger.info("Scheduling queue consumer: {}".format(self.queue_url))
         count = self._number_of_messages()
         execution_counts = self._execution_counts(count)
         jobs = []
         for count in execution_counts:
             jobs.append(self._one_invoke_request(count))
         yield jobs
+        logger.info("Queue {} consumer scheduling complete.".format(
+            self.queue_url))
